@@ -200,6 +200,12 @@ foreach [native spec] [
 
         return: result "Either the result of evaluating CODE or that of evaluating DEFAULT"
     ]
+    evaluate [
+        "Evaluate a Javascript statement"
+        statement [string!]
+
+        return: result "Either the result of evaluating CODE or that of evaluating DEFAULT"
+    ]
     add [
         "Add val1 to val2"
         val1 [number!]

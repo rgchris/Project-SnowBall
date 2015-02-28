@@ -383,6 +383,13 @@ natives: make-struct [
         ]
         res
     ]
+    evaluate: function [
+        "Evaluate a JavaScript Statement (brick)"
+        statement [string!]
+    ][result][
+        result: apply eval [statement/string]
+        make string! apply JSON/stringify [result]
+    ]
     form-error: function [
         "Format the error into a human readable string"
         err [error!]
